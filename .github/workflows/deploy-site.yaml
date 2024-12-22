@@ -10,36 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Install Node.js (required for PostCSS and Tailwind CSS)
+      # Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '18'
 
-      # Step 3: Install dependencies for PostCSS and Tailwind CSS
-      - name: Install PostCSS and TailwindCSS
-        run: |
-          npm install postcss postcss-cli autoprefixer tailwindcss
+      # Install dependencies
+      - name: Install Dependencies
+        run: npm install
 
-      # Step 4: Initialize submodules for themes
+      # Initialize submodules
       - name: Initialize Submodules
         run: git submodule update --init --recursive
 
-      # Step 5: Set up Hugo
+      # Set up Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: '0.110.0'
 
-      # Step 6: Build the Hugo site
+      # Build the Hugo site
       - name: Build Hugo Site
         run: hugo --minify
 
-      # Step 7: Deploy to GitHub Pages
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
