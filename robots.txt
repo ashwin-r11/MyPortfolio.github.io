@@ -1,23 +1,23 @@
 User-agent: *
 
-Disallow: /MyPortfolio.github.io/
+Disallow: /
 
-Disallow: /MyPortfolio.github.io/categories/
+Disallow: /categories/
 
-Disallow: /MyPortfolio.github.io/tags/hello/
+Disallow: /tags/hello/
 
-Disallow: /MyPortfolio.github.io/categories/hello/
+Disallow: /categories/hello/
 
-Disallow: /MyPortfolio.github.io/posts/markdown-cheat-sheet/
+Disallow: /posts/markdown-cheat-sheet/
 
-Disallow: /MyPortfolio.github.io/posts/
+Disallow: /posts/
 
-Disallow: /MyPortfolio.github.io/tags/
+Disallow: /tags/
 
-Disallow: /MyPortfolio.github.io/tags/whatsapp/
+Disallow: /tags/whatsapp/
 
-Disallow: /MyPortfolio.github.io/categories/css/
+Disallow: /categories/css/
 
-Disallow: /MyPortfolio.github.io/categories/javascript/
+Disallow: /categories/javascript/
 
-Disallow: /MyPortfolio.github.io/categories/uncategories/
+Disallow: /categories/uncategories/
