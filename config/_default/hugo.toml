@@ -1,4 +1,4 @@
-baseURL = 'https://ashwinr-11.github.io/MyPortfolio.github.io/'
+baseURL = 'https://ashwinr.me/'
 #copyright = "{year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
 languageCode = 'en-US'
 defaultContentLanguage = 'en'
