@@ -20,11 +20,22 @@ jobs:
         with:
           hugo-version: "latest"
 
-      # Install Theme
+      # Install Node.js (required for PostCSS and Tailwind CSS)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      # Install dependencies
+      - name: Install CSS Tools
+        run: |
+          npm install -g postcss postcss-cli autoprefixer tailwindcss
+
+      # Initialize Submodules
       - name: Initialize Submodules
         run: git submodule update --init --recursive
 
-      # Build the site
+      # Build the Hugo site
       - name: Build Hugo Site
         run: hugo --minify
 
@@ -35,4 +46,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-
